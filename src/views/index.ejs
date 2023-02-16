@@ -1,17 +1,31 @@
-<%- include('includes/head'); %>
+ <%- include('includes/head') %>
+ <%- include('includes/nav') %>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 my-3">
+          <h1 class=" text-center">Agenda</h1>
+          <p class="text-center lead">Seus contatos</p>
 
+          <div class="row">
+            <div class="col my-3">
+              <div class="alert alert-danger">Error</div>
+            </div>
+          </div>
 
-  <section class="container">
-    <h1>
-      <%- typeof titulo !== 'undefined'? titulo: 'Não foi possivel carregar o titulo' %>
+           <div class="responsive-table">
+            <table class="table my-3">
+              <tr>
+                <td>Mateus</td>
+                <td>Monaco</td>
+                <td>812931345</td>
+                <td>mateus@gmail.com</td>
+              </tr>
+            </table>
+           </div>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
 
-    </h1>
-    <form action="/" method="post">
-      <input type="hidden" name="_csrf" value="<%- csrfToken %>">
-      <input type="text" name="nome" placeholder="digite seu nome">
-      <button>submit</button>
-    </form>
-  </section>
-
-
-<%- include('includes/footer'); %>
+ <%- include('includes/footer') %>
