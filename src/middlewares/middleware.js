@@ -1,5 +1,6 @@
 exports.meuMiddleware = (req,res,next) => {
-    res.locals.VariavelLocal = 'Sou uma variavel local';
+    res.locals.errors = req.flash('errors');
+    res.locals.success = req.flash('success');
     next();
 };
 
